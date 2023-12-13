@@ -22,6 +22,17 @@ header {
 .logo img {
   max-height: 85px;
   margin-right: 10px;
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.logo a{
+  text-decoration: none;
+}
+
+.instaLogo{
+  height: 30px;
+  width: 30px;
 }
 
 nav {
