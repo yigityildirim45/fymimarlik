@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furkan Yıldırım Mimarlık</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C86XTNK7SM"></script>
@@ -14,154 +14,193 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-C86XTNK7SM');
     </script>
     <style>
-        #project_img{
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
+        .project-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin: 20px 0;
         }
-        #project_img:hover{
-            -webkit-filter: grayscale(0%);
-            filter: grayscale(0%); 
-        }
+
+        .project {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.project:hover img{
+    filter: brightness(100%);
+}
+
+.project img {
+    width: 100%;
+    height: 60%; /* Resmin yüksekliğini ayarlayabilirsiniz */
+    object-fit: cover;
+    object-position: center center;
+    transition: filter 0.3s ease-in-out;
+     filter: brightness(70%);
+}
+
+.project-info {
+    padding: 15px;
+    background-color: #fff;
+    height: 40%; /* Metin kutusunun yüksekliğini ayarlayabilirsiniz */
+    box-sizing: border-box;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.project a{text-decoration: none;}
+
+.project-info p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
     </style>
 </head>
 
 <body>
-      <div style="background-color: #252531;">
-    <header class="py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="img\fylogo.png" alt="Furkan Yıldırım Mimarlık Logo" class="img-fluid">
-                <a href="index.html" class="text-white fw-bold">FY Mimarlık</a>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="index.html">Anasayfa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="projects.html">Projelerimiz</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" href="services.html">Hizmetlerimiz</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="references.html">Referanslarımız</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="contact.html">İletişim</a>
-                        </li>
-                    </ul>
+    <div style="background-color: #252531;">
+        <header class="py-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="index.html"><img src="img/fylogo.png" alt="Furkan Yıldırım Mimarlık Logo" class="img-fluid"></a>
+                    <a href="index.html" class="text-white fw-bold">FY Mimarlık</a>
                 </div>
-            </nav>
-        </div>
-    </header>
-</div>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Anasayfa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="projects.html">Projelerimiz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white active" href="services.html">Hizmetlerimiz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="references.html">Referanslarımız</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="contact.html">İletişim</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
 
     <div id="app">
-        
-
         <main class="container mt-4">
             <div class="container" style="margin-bottom: 40px;">
                 <h2 class="text-center mt-4">Projelerimiz</h2>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <!-- Referans Kartları -->
-
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="pages/benzin.html"><img src="img/referances/benzin.png" class="card-img-top"
-                                alt="Benzin Social Proje kapak fotoğrafı" style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+            <div class="project-container">
+                <!-- Projelerin Kartları -->
+                <div class="project">
+                    <a href="pages/benzin.html">
+                        <img src="pages\benzinfotos\image00003-min.jpeg" class="card-img-top project-img"
+                            alt="Benzin Social Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>Benzin Social</h3>
+                            <p>Kategori: Sosyal Proje</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="pages/han.html"><img src="img/project_photos/han-logo.png" class="card-img-top" alt="Han Trading Proje kapak fotoğrafı"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+                <div class="project">
+                    <a href="pages/han.html">
+                        <img src="pages\hanTrading\Han1.jpg" class="card-img-top project-img"
+                            alt="Han Trading Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>Han Trading</h3>
+                            <p>Kategori: Ticari Proje</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="pages/hkEv.html"><img src="pages/hkEvIMG/hkEvCover.png" class="card-img-top" alt="HK Ev Proje kapak fotoğrafı"
-                            style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+                <div class="project">
+                    <a href="pages/hkEv.html">
+                        <img src="pages\hkEvIMG\1.jpg" class="card-img-top project-img"
+                            alt="HK Ev Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>HK Ev</h3>
+                            <p>Kategori: Konut Proje</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="pages/ucakEv.html"><img src="pages/ucakEvIMG/UcakEvCover.png" class="card-img-top" alt="Uçak Ev Proje kapak fotoğrafı"
-                            style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+                <div class="project">
+                    <a href="pages/ucakEv.html">
+                        <img src="pages\ucakEvIMG\ucakEv.jpg" class="card-img-top project-img"
+                            alt="Uçak Ev Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>Uçak Ev</h3>
+                            <p>Kategori: Konut Proje</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="#"><img src="img\project_photos\fyApartCover.png" class="card-img-top" alt="FY Apart Proje kapak fotoğrafı"
-                            style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+                <div class="project">
+                    <a href="pages/fyApart.html">
+                        <img src="pages\fyApart\fyApart.jpg" class="card-img-top project-img"
+                            alt="FY Apart Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>FY Apart</h3>
+                            <p>Kategori: Konut Proje</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="#"><img src="img\project_photos\sogukHavaDeposuCivrilCover.png" class="card-img-top" alt="Soğuk Hava Deposu Proje kapak fotoğrafı"
-                            style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+                <div class="project">
+                    <a href="#">
+                        <img src="pages\sogukHavaDeposu\sogukHavaDeposu.png" class="card-img-top project-img"
+                            alt="Soğuk Hava Deposu Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>Soğuk Hava Deposu Çivril</h3>
+                            <p>Kategori: Endüstriyel Proje</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4">
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="pages/ucakEv.html"><img src="pages/ucakEvIMG/UcakEvCover.png" class="card-img-top" alt="Uçak Evi Proje kapak fotoğrafı"
-                            style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
+                <div class="project">
+                    <a href="pages/makamOdasi.html">
+                        <img src="pages\makamOdasi\IMG_5131.jpg" class="card-img-top project-img"
+                            alt="Makam Odası Proje kapak fotoğrafı">
+                        <div class="project-info">
+                            <h3>Makam Odası</h3>
+                            <p>Kategori: Konut İç Dizayn</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col mb-4" >
-                    <div id="project_img" class="card border-0 mx-auto">
-                        <a href="pages/ucakEv.html"><img src="pages/ucakEvIMG/UcakEvCover.png" class="card-img-top" alt="Uçak Ofis Proje kapak fotoğrafı"
-                            style="height: 100%; width: 100%;"></a>
-                        <div class="card-body">
-                            <!--<h5 class="card-title"></h5>-->
-                        </div>
-                    </div>
-                </div>
-                
-
             </div>
-
         </main>
-
-
     </div>
 
-    
-    <footer class=" text-center py-3 mt-4" style="background-color: #252531; color : white">
+    <footer class=" text-center py-3 mt-4" style="background-color: #252531; color: white">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm">
-                    <p><a href="http://www.instagram.com/fy.mimarlik"><img src="img/insta_logo.png" class="instaLogo"></a></p>
+                    <p>
+                        <a href="http://www.instagram.com/fy.mimarlik"><img src="img/insta_logo.png" class="instaLogo"></a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -172,7 +211,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
